@@ -3,6 +3,9 @@
 Homebrew formulae for RIDI's open-source tools.
 
 ```sh
+# Homebrew 6 asks you to trust a third-party formula before it will load one. Trust the
+# formula rather than the whole tap, so a future formula added here is not trusted implicitly.
+brew trust --formula ridi-oss/tap/pmon
 brew install ridi-oss/tap/pmon
 ```
 
