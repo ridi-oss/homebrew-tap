@@ -51,7 +51,7 @@ class Pmon < Formula
     assert_match "login", shell_output("#{bin}/pmon --help")
 
     # A missing argument is rejected by the CLI itself, which proves the binary parses rather than
-    # merely executing — and it needs no daemon, no login, and no network.
-    assert_match "datasource", shell_output("#{bin}/pmon show 2>&1", 1)
+    # merely executing — and it needs no daemon, no login, and no network. kong exits 80 on a usage error.
+    assert_match "datasource", shell_output("#{bin}/pmon show 2>&1", 80)
   end
 end
