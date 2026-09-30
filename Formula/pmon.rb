@@ -1,28 +1,28 @@
 class Pmon < Formula
   desc "Reach a database through proxy-monster on a stable local port"
   homepage "https://github.com/ridi-oss/proxy-monster"
-  version "0.1.5"
+  version "0.1.6"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.5/pmon_0.1.5_darwin_arm64.tar.gz"
-      sha256 "377aba56a7217c2ec4285c68518bac521e9c911b73b05fcf16c71cdd63d84bd7"
+      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.6/pmon_0.1.6_darwin_arm64.tar.gz"
+      sha256 "dcefca5bc5106482980fa720a1965ab9e90c72aecf425136066655006000b656"
     end
     on_intel do
-      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.5/pmon_0.1.5_darwin_amd64.tar.gz"
-      sha256 "3a973027f3d0ef5c8d10c1bcba5f4dbc203dc69842475e1b56b10b4b7ec264a7"
+      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.6/pmon_0.1.6_darwin_amd64.tar.gz"
+      sha256 "08d071138800d2bffb03a830e4c779d7a3882f2348b3ad71fdb5e3ae35b239fb"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.5/pmon_0.1.5_linux_arm64.tar.gz"
-      sha256 "358e3f495be5e7352101585d8f7183dd1429deba3e56aff1d4abbc3281bb055e"
+      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.6/pmon_0.1.6_linux_arm64.tar.gz"
+      sha256 "c8b36c6db45c752c16ef9b1089e39f9af1bae67e674ac69100a94f0b00470058"
     end
     on_intel do
-      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.5/pmon_0.1.5_linux_amd64.tar.gz"
-      sha256 "ed6be3c2d58d8e993d9bbb1508eb642a19e286cac9f2f0505231b92304b4911f"
+      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.6/pmon_0.1.6_linux_amd64.tar.gz"
+      sha256 "13b236320d9c5b5a8dfd810430e5d2cc04fa010a852530d7769a6fa735badf3c"
     end
   end
 
@@ -33,8 +33,10 @@ class Pmon < Formula
   def caveats
     <<~EOS
       Log in before connecting; that also starts the daemon and opens the brokers:
-        pmon login
+        pmon login --url <control-plane-url>
         pmon show <datasource>
+
+      Upgrading? Run `pmon restart` so the running daemon picks up this version.
 
       The daemon's lifetime is yours to choose, so there is no brew service for it.
       `pmon stop` closes it.
