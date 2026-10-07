@@ -1,28 +1,28 @@
 class Pmon < Formula
   desc "Reach a database through proxy-monster on a stable local port"
   homepage "https://github.com/ridi-oss/proxy-monster"
-  version "0.1.7"
+  version "0.1.8"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
-      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.7/pmon_0.1.7_darwin_arm64.tar.gz"
-      sha256 "41c50cb6155388baff187770c2f94201af80431c8d1edb6d439821c082ca7032"
+      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.8/pmon_0.1.8_darwin_arm64.tar.gz"
+      sha256 "33489ef7c69a28520994c7008cf5a1be03722e57e2c4c40141cf71f4685a8f03"
     end
     on_intel do
-      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.7/pmon_0.1.7_darwin_amd64.tar.gz"
-      sha256 "2470b572ad8d9f6433196791c5167d09c51c0ba25e553bf8932ed132d7d99933"
+      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.8/pmon_0.1.8_darwin_amd64.tar.gz"
+      sha256 "e6bb35f3d4f0804d6398459d1155730cc1a3f726bcf1b5a992031eb2016e33f4"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.7/pmon_0.1.7_linux_arm64.tar.gz"
-      sha256 "567b28a1ccd4bce6094d799bd96c6647e9281bff24dd14f778421e96222b114a"
+      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.8/pmon_0.1.8_linux_arm64.tar.gz"
+      sha256 "6a4e2fbbd3a0f9dd026b7370f139f71e6dd593217af5886fa60f8c8f0a394b6c"
     end
     on_intel do
-      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.7/pmon_0.1.7_linux_amd64.tar.gz"
-      sha256 "7f7f53cf9e6ddf0022c17e8ce3a118a2308779675ca20264a59ed24dfe89a6a7"
+      url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v0.1.8/pmon_0.1.8_linux_amd64.tar.gz"
+      sha256 "8bebec137fe7d8c39960a0a893393a08e1a68413d727e1f07b1b35cbde442e76"
     end
   end
 
