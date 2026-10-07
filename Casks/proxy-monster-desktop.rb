@@ -13,8 +13,7 @@ cask "proxy-monster-desktop" do
     strategy :github_releases
   end
 
-  # The app bundles pmon and puts it on PATH; the formula's pmon would be a second copy driving one daemon.
-  conflicts_with formula: "pmon"
+  # Bundles pmon on PATH, so it can't install beside the pmon formula (casks can't declare that conflict).
   depends_on macos: :monterey
 
   app "Proxy Monster Desktop.app"
