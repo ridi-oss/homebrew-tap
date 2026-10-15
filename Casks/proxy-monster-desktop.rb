@@ -1,6 +1,6 @@
 cask "proxy-monster-desktop" do
-  version "0.1.9"
-  sha256 "1b59fa833d3578c4c491fa7fb3d02e94ad6d87ac0652e2d06cdaecc3ef5d637e"
+  version "0.1.14"
+  sha256 "b74b27463cc8ec5211f0df32f649569acb387a4a635f110b05c0b00df09ac12e"
 
   url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v#{version}/ProxyMonsterDesktop_#{version}_darwin_universal.zip"
   name "Proxy Monster Desktop"
@@ -13,6 +13,7 @@ cask "proxy-monster-desktop" do
     strategy :github_releases
   end
 
+  auto_updates true
   # Bundles pmon on PATH, so it can't install beside the pmon formula (casks can't declare that conflict).
   depends_on macos: :monterey
 
