@@ -1,6 +1,6 @@
 cask "proxy-monster-desktop" do
-  version "0.1.14"
-  sha256 "b74b27463cc8ec5211f0df32f649569acb387a4a635f110b05c0b00df09ac12e"
+  version "0.1.15"
+  sha256 "00adaa4ed3c3f165a21ea50b0740ed4accbb936467afccee409915ba72b7d66b"
 
   url "https://github.com/ridi-oss/proxy-monster/releases/download/pmon-v#{version}/ProxyMonsterDesktop_#{version}_darwin_universal.zip"
   name "Proxy Monster Desktop"
